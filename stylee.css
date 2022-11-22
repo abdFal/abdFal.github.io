@@ -1,0 +1,763 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+@import url("https://fonts.googleapis.com/css2?family=League Spartan");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+a:-webkit-any-link {
+  color: var(--color-primary);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --color-putih: #dbe5f6;
+  --color-secondary: #081b2c;
+  --color-aan: #2c394b;
+  --color-away: #334756;
+  --color-kuning: #ff5a39;
+}
+/* all similar content styling codes */
+section {
+  margin: 70px 0;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
+  font-family: "Poppins", sans-serif;
+}
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "League Spartan", sans-serif;
+}
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  transform: translateX(-50%);
+}
+section .title::after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  padding: 0 5px;
+  transform: translateX(-50%);
+}
+/* header section styling */
+.header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.8rem 0 1.2rem 0;
+}
+.logo {
+  width: auto;
+  font-family: "Poppins";
+  margin-left: 31px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  font-size: 16px;
+}
+.logo i {
+  font-size: 40px;
+}
+.logo h1 {
+  color: var(--color-kuning);
+  text-align: center;
+  padding: 1px 3px;
+}
+.logo span h1 {
+  background: none;
+  color: var(--color-putih);
+  font-family: "Poppins";
+  transform: rotate(0deg);
+}
+.navbar ul {
+  padding-top: 6px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  border-radius: 25px;
+}
+.navbar li {
+  font-family: "Poppins";
+  margin: auto;
+  color: var(--color-putih);
+  transition: 490ms ease-in-out;
+}
+.navbar li:hover {
+  color: var(--color-kuning);
+}
+.navbar li:after {
+  display: block;
+  content: "";
+  border-bottom: solid 1.5px var(--color-kuning);
+  padding-bottom: 2%;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+.navbar li:hover:after {
+  transform: scaleX(1);
+}
+.toggle {
+  display: none;
+  margin: 0 20;
+}
+/* about section styling */
+aside,
+p {
+  color: var(--color-putih);
+}
+h2 {
+  color: var(--color-putih);
+  font-family: "Poppins";
+}
+
+.about {
+  margin: 0 0 70px 0;
+}
+.about .title::after {
+  content: "Siapakah saya ?";
+  background: transparent;
+  color: var(--color-kuning);
+  font-weight: normal;
+}
+.about .about-content .left {
+  width: 45%;
+}
+.about .about-content .left {
+  height: 420px;
+  width: 420px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  display: flex;
+  justify-content: center;
+  margin: -60px auto 0 auto;
+}
+.about .about-content .right {
+  text-align: center;
+}
+.about .about-content .right .text {
+  font-size: 25px;
+  padding-top: 14px;
+  margin-bottom: 10px;
+  color: var(--color-putih);
+  margin-left: 10px;
+}
+.about .about-content .right p {
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.about .about-content .right a {
+  text-transform: uppercase;
+  position: relative;
+  padding: 15px 30px;
+  display: inline-block;
+  color: var(--color-putih);
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-family: "League Spartan";
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.15s;
+}
+.about .about-content .right a:hover {
+  color: #888;
+  background: var(--color-putih);
+  box-shadow: 0 0 10px var(--color-putih), 0 0 40px var(--color-putih),
+    0 0 80px var(--color-putih);
+  transition-delay: 0.9s;
+  animation: infinite;
+  transform: scale(1.1);
+}
+.about .about-content .right a div {
+  position: absolute;
+  display: block;
+}
+.about .about-content .right a div:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-putih));
+}
+.about .about-content .right a:hover div:nth-child(1) {
+  left: 100%;
+  transition: 0.75s;
+}
+.about .about-content .right a div:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--color-putih));
+}
+.about .about-content .right a:hover div:nth-child(3) {
+  right: 100%;
+  transition: 0.5s;
+  transition-delay: 0.6s;
+}
+.about .about-content .right a div:nth-child(2) {
+  top: -100%;
+  right: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--color-putih));
+}
+.about .about-content .right a:hover div:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.about .about-content .right a div:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(45deg, transparent, var(--color-putih));
+}
+.about .about-content .right a:hover div:nth-child(4) {
+  bottom: 100%;
+  transition: 0.5s;
+  transition-delay: 0.75s;
+}
+aside h2::before {
+  display: none;
+}
+/* skills section styling */
+.skills {
+  margin: 160px auto;
+  padding: 0 0;
+}
+.skills-title {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--color-putih);
+}
+.skills-title::after {
+  content: "Apa aja yang saya pelajari?";
+  background: transparent;
+  color: var(--color-kuning);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  font-size: 20px;
+  transform: translateX(-50%);
+  font-weight: normal;
+  font-family: "League Spartan";
+}
+.skills-img {
+  display: block;
+  margin: 100px auto;
+  width: 79%;
+  align-items: center;
+}
+.skills-img2 {
+  display: none;
+}
+/* project section styling */
+.projek-saya {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 15px;
+  color: var(--color-putih);
+}
+.projek-saya-after {
+  text-align: center;
+  background: transparent;
+  color: var(--color-kuning);
+  left: 50%;
+  font-size: 20px;
+  font-family: "League Spartan";
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+.services {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 45vh;
+  background: var(--color-secondary);
+  justify-content: center;
+  align-items: center;
+  font-family: "League Spartan";
+}
+.container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+}
+.container .card {
+  margin: 0 5px;
+}
+.container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.4s;
+}
+.container .card .face.face1 {
+  position: relative;
+  background: var(--color-aan);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+.container .card:hover .face.face1 {
+  transform: translateY(0);
+  background: var(--color-kuning);
+}
+.container .card .face.face1 .content {
+  opacity: 0.7;
+  transition: 0.5s;
+  text-align: center;
+}
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+.container .card .face.face1 .content h3 {
+  font-size: 1em;
+  color: var(--color-putih);
+  text-align: center;
+  margin-top: 10px;
+}
+.container .card .face.face1 .content i {
+  font-size: 22px;
+  color: var(--color-putih);
+}
+.container .card .face.face1 .content a {
+  transition: 0.5s;
+}
+.container .card .face.face2 {
+  position: relative;
+  background: rgb(248, 253, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateY(-100px);
+}
+.container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+.container .card .face.face2 .content p {
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+  color: rgb(61, 61, 61);
+}
+.container .card .face.face2 .content a {
+  font-size: 17px;
+  color: #111 !important;
+}
+.container .card .face.face2 .content a {
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  outline: 1px dashed #333;
+  padding: 10px;
+  margin: 15px 0 0;
+  display: inline-block;
+  transition: 0.4s;
+}
+.container .card .face.face2 .content a:hover {
+  background: #fff;
+}
+.certificate .title {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 15px;
+  color: var(--color-putih);
+}
+.certificate .title::after {
+  content: "Beberapa sertifikat yang saya punya";
+  background: transparent;
+  color: var(--color-kuning);
+  position: absolute;
+  left: 50%;
+  bottom: -17px;
+  font-size: 20px;
+  transform: translateX(-50%);
+  font-weight: normal;
+  font-family: "League Spartan";
+}
+.certificate-img {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.certificate-img img {
+  transform: scale(0.8);
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+.certificate-img img:hover {
+  opacity: 0.3;
+}
+/* contact section styling */
+.head {
+  color: var(--color-primary);
+}
+.contact h2 {
+  color: var(--color-putih);
+  font-weight: bold;
+}
+.contact {
+  margin-top: 140px;
+}
+.contact .title::after {
+  content: "In Your Touch";
+  background: transparent;
+  color: var(--color-kuning);
+  font-weight: normal;
+  font-family: "League Spartan";
+}
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--color-putih);
+}
+.contact .contact-content .left p {
+  text-align: justify;
+  font-family: "League Spartan";
+  font-size: 20px;
+}
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: var(--color-kuning);
+}
+.contact .contact-content .info .head {
+  font-weight: 500;
+  color: var(--color-putih);
+}
+.contact .contact-content .info .sub-title {
+  color: var(--color-putih);
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .textarea {
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .email {
+  margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(45, 45, 45);
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  background-color: var(--color-aan);
+  color: var(--color-putih);
+}
+.contact .right form .textarea textarea:before {
+  background: var(--color-aan);
+  background: var(--color-aan);
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+  animation: glow 800ms ease-out infinite alternate;
+  background: #222922;
+  background: var(--color-away);
+  border-color: var(--color-kuning);
+  box-shadow: 0 0 5px var(--color-kuning), inset 0 0 5px var(--color-kuning),
+    0 2px 0 var(--color-away);
+  outline: none;
+}
+@keyframes glow {
+  0% {
+    border-color: var(--color-kuning);
+    box-shadow: 0 0 5px var(--color-kuning), inset 0 0 5px var(--color-kuning),
+      0 2px 0 var(--color-aan);
+  }
+  100% {
+    border-color: #ff9939;
+    box-shadow: 0 0 20px var(--color-kuning), inset 0 0 10px var(--color-kuning),
+      0 2px 0 var(--color-aan);
+  }
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button {
+  height: 47px;
+  width: 120px;
+  align-items: flex-end;
+}
+.contact .right form .button button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: var(--color-kuning);
+  color: var(--color-putih);
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact .right form .button button:hover {
+  color: var(--color-kuning);
+  background: var(--color-secondary);
+}
+.contact .title::before {
+  display: none;
+}
+.row i {
+  padding: 3px 9px;
+  transition: 0.3s ease;
+}
+.row i:hover {
+  transform: scale(1.1);
+}
+/* footer styling */
+footer {
+  opacity: 0.8;
+  text-align: center;
+  cursor: default;
+  padding: 14px 0px;
+}
+footer a {
+  color: rgb(135, 135, 135) !important;
+  padding: 4px;
+  font-size: 13px;
+}
+footer span {
+  color: rgb(135, 135, 135);
+  font-size: 13px;
+}
+footer span a {
+  text-decoration: underline;
+  color: rgb(135, 135, 135) !important;
+}
+/* pusing ulang sama nyari */
+header,
+main,
+body {
+  background-color: var(--color-secondary);
+}
+main {
+  font-family: "League Spartan";
+}
+/* media query */
+@media screen and (max-width: 1300px) {
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    justify-items: center;
+  }
+  .container .card {
+    position: relative;
+    justify-content: space-evenly;
+  }
+  .container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.4s;
+  }
+  .container .card .face.face2 .content p {
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+    color: rgb(61, 61, 61);
+  }
+  .services {
+    display: block;
+  }
+}
+@media screen and (max-width: 1135px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container .card .face {
+    width: 340px;
+    height: 200px;
+    transition: 0.4s;
+  }
+  .container .card {
+    position: relative;
+    justify-content: center;
+  }
+  .header {
+    padding: 28px 7px 22px 7px;
+  }
+  section .title {
+    font-size: 28px;
+  }
+  .projek-saya,
+  .skills-title {
+    font-size: 28px;
+  }
+  .about .about-content .right .text {
+    font-size: 24px;
+  }
+  .about .about-content .right p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1042px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 32px 10px 27px 15px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section .title {
+    font-size: 23px;
+  }
+  .projek-saya,
+  .skills-title {
+    font-size: 23px;
+  }
+  .about .about-content .right .text {
+    font-size: 20px;
+  }
+  .about .about-content .right p {
+    font-size: 15px;
+  }
+  .contact .contact-content .column {
+    width: calc(90% - 30px);
+  }
+  .contact-content {
+    justify-content: center;
+  }
+  .skills-img2 {
+    display: block;
+    width: 49%;
+    justify-content: center;
+    margin: 70px auto 40px auto;
+  }
+  .skills-img {
+    display: none;
+  }
+  .skills {
+    margin: 90px auto;
+  }
+}
+@media screen and (max-width: 668px) {
+  .navbar {
+    display: none;
+  }
+  .certificate-img {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .certificate-img img {
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    display: default;
+    justify-content: center;
+  }
+  .logo {
+    font-size: 12px;
+    margin-right: 13px;
+  }
+  .logo i {
+    font-size: 19px;
+  }
+  .contact .contact-content .column {
+    width: calc(100% - 1px);
+  }
+}
+@media screen and (max-width: 414px) {
+  section .title::after {
+    bottom: -25px;
+  }
+  .header {
+    margin-bottom: 16px;
+  }
+  .certificate-img {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
