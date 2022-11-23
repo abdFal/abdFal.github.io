@@ -723,7 +723,7 @@ main {
     margin: 90px auto;
   }
 }
-@media screen and (max-width: 709px) {
+@media screen and (max-width: 710px) {
   .navbar {
     display: none;
   }
