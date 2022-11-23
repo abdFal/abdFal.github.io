@@ -723,15 +723,17 @@ main {
     margin: 90px auto;
   }
 }
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 709px) {
   .navbar {
     display: none;
   }
+}
+@media screen and (max-width: 668px) {
   .certificate-img {
     grid-template-columns: repeat(1, 1fr);
   }
   .certificate-img img {
-    transform: scale(0.9);
+    transform: scale(0.7);
   }
 }
 @media screen and (max-width: 480px) {
@@ -748,6 +750,11 @@ main {
   }
   .contact .contact-content .column {
     width: calc(100% - 1px);
+  }
+}
+@media screen and (max-width: 448px) {
+  section .title::after {
+    bottom: -25px;
   }
 }
 @media screen and (max-width: 414px) {
