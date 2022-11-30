@@ -1,3 +1,3 @@
-function kirim(){
-    alert("Afakah yakin dek?")
+function kirim() {
+  alert("Afakah yakin?");
 }
