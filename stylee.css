@@ -332,8 +332,8 @@ aside h2::before {
   margin: 0 5px;
 }
 .container .card .face {
-  width: 300px;
-  height: 200px;
+  width: 270px;
+  height: 170px;
   transition: 0.4s;
 }
 .container .card .face.face1 {
@@ -759,12 +759,32 @@ main {
 }
 @media screen and (max-width: 414px) {
   section .title::after {
-    bottom: -25px;
+    bottom: -35px;
   }
   .header {
     margin-bottom: 16px;
   }
   .certificate-img {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .aaa {
+    margin-top: 3rem;
+    width: 90%;
+    height: 60%;
+  }
+  .max-width {
+    padding: 0 45px;
+  }
+  .container .card .face {
+    width: auto;
+  }
+  .certificate .title::after {
+    bottom: -44px;
+  }
+  .skills-title::after {
+    bottom: -43px;
+  }
+  .title::after {
+    bottom: -39px;
   }
 }
