@@ -699,6 +699,9 @@ main {
   }
 }
 @media screen and (max-width: 668px) {
+  .home {
+    padding: 0;
+  }
   .certificate-img {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -713,6 +716,7 @@ main {
     transform: scale(0.8);
   }
   .img-head img {
+    margin-top: 0;
     margin-left: 25px;
   }
   .text-2 {
