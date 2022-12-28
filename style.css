@@ -474,9 +474,7 @@ section .title::after {
 .contact .contact-content .info .sub-title {
   color: var(--color-putih);
 }
-.contact .right form .fields {
-  display: flex;
-}
+
 .contact .right form .field,
 .contact .right form .fields .field {
   height: 45px;
@@ -490,9 +488,7 @@ section .title::after {
 .contact .right form .name {
   margin-right: 10px;
 }
-.contact .right form .email {
-  margin-left: 10px;
-}
+
 .contact .right form .field input,
 .contact .right form .textarea textarea {
   height: 100%;
@@ -541,6 +537,7 @@ section .title::after {
   height: 47px;
   width: 120px;
   align-items: flex-end;
+  margin-top: 2rem;
 }
 .contact .right form .button button {
   width: 100%;
