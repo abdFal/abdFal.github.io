@@ -1,30 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins");
-@import url("https://fonts.googleapis.com/css2?family=League Spartan");
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
 }
 html {
   scroll-behavior: smooth;
+  background: var(--bg-dark);
 }
-a:-webkit-any-link {
-  color: var(--color-primary);
-}
+
+/* custom scroll bar */
 ::-webkit-scrollbar {
   display: none;
 }
 :root {
-  --color-putih: #dbe5f6;
+  --bg-dark: #081b2c;
+  --color-putih: rgb(235, 243, 255);
+  --color-kuning: #ff5a39;
   --color-secondary: #081b2c;
   --color-aan: #2c394b;
   --color-away: #334756;
-  --color-kuning: #ff5a39;
 }
 /* all similar content styling codes */
 section {
-  margin: 70px 0;
+  padding: 50px 0;
 }
 .max-width {
   max-width: 1300px;
@@ -39,7 +40,7 @@ section {
 footer {
   font-family: "Poppins", sans-serif;
 }
-.about .about-content,
+
 .services .serv-content,
 .skills .skills-content,
 .contact .contact-content {
@@ -52,217 +53,191 @@ section .title {
   position: relative;
   text-align: center;
   font-size: 30px;
+  font-weight: 500;
   margin-bottom: 60px;
   padding-bottom: 20px;
-  font-family: "League Spartan", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 section .title::before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 180px;
-  height: 3px;
-  transform: translateX(-50%);
+  display: none;
 }
 section .title::after {
   position: absolute;
   bottom: -8px;
   left: 50%;
   font-size: 20px;
+  color: rgb(93, 2, 178);
   padding: 0 5px;
+  background: #fff;
   transform: translateX(-50%);
 }
-/* header section styling */
-.header {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
+
+/* navbar styling */
+.navbar {
+  position: fixed;
   width: 100%;
-  padding: 1.8rem 0 1.2rem 0;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
 }
-.logo {
-  width: auto;
-  font-family: "Poppins";
-  margin-left: 31px;
+.navbar.sticky {
+  padding: 15px 0;
+  background: #ff5a39;
+  color: #fff;
+}
+.navbar-item {
   display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
 }
-.logo i {
-  font-size: 40px;
+.navbar .logo a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
 }
-.logo h1 {
-  color: var(--color-kuning);
-  text-align: center;
-  padding: 1px 3px;
+.my {
+  transform: rotate(20deg);
 }
-.logo span h1 {
-  background: none;
-  color: var(--color-putih);
-  font-family: "Poppins";
-  transform: rotate(0deg);
+.navbar .logo span {
+  background: var(--color-kuning);
+  border-radius: 15px;
+  padding: 8px 5px;
+
+  margin-right: 4px;
 }
-.navbar ul {
-  padding-top: 6px;
-  width: 400px;
-  display: flex;
-  flex-direction: row;
+.navbar.sticky .logo a span {
+  color: #fff;
+}
+.navbar .menu li {
   list-style: none;
-  border-radius: 25px;
+  display: inline-block;
 }
-.navbar li {
-  font-family: "Poppins";
-  margin: auto;
-  color: var(--color-putih);
-  transition: 490ms ease-in-out;
-}
-.navbar li:hover {
-  color: var(--color-kuning);
-}
-.navbar li:after {
+.navbar .menu li a {
   display: block;
-  content: "";
-  border-bottom: solid 1.5px var(--color-kuning);
-  padding-bottom: 2%;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: 0.3s all ease;
 }
-.navbar li:hover:after {
-  transform: scaleX(1);
+.navbar .menu li a:hover {
+  opacity: 0.8;
 }
-.toggle {
-  display: none;
-  margin: 0 20;
-}
-/* about section styling */
-aside,
-p {
-  color: var(--color-putih);
-}
-h2 {
-  color: var(--color-putih);
-  font-family: "Poppins";
+.navbar.sticky .menu li a:hover {
+  color: #fff;
 }
 
-.about {
-  margin: 0 0 70px 0;
-}
-.about .title::after {
-  content: "Siapakah saya ?";
-  background: transparent;
-  color: var(--color-kuning);
-  font-weight: normal;
-}
-.about .about-content .left {
-  width: 45%;
-}
-.about .about-content .left {
-  height: 420px;
-  width: 420px;
-  object-fit: cover;
-  border-radius: 6px;
-  display: block;
-  display: flex;
-  justify-content: center;
-  margin: -60px auto 0 auto;
-}
-.about .about-content .right {
-  text-align: center;
-}
-.about .about-content .right .text {
-  font-size: 25px;
-  padding-top: 14px;
-  margin-bottom: 10px;
-  color: var(--color-putih);
-  margin-left: 10px;
-}
-.about .about-content .right p {
-  text-align: justify;
-  margin-top: 20px;
-  margin-bottom: 25px;
-}
-.about .about-content .right a {
-  text-transform: uppercase;
-  position: relative;
-  padding: 15px 30px;
-  display: inline-block;
-  color: var(--color-putih);
-  letter-spacing: 2px;
-  text-decoration: none;
-  font-family: "League Spartan";
-  font-size: 15px;
-  overflow: hidden;
-  transition: 0.15s;
-}
-.about .about-content .right a:hover {
-  color: #888;
-  background: var(--color-putih);
-  box-shadow: 0 0 10px var(--color-putih), 0 0 40px var(--color-putih),
-    0 0 80px var(--color-putih);
-  transition-delay: 0.9s;
-  animation: infinite;
-  transform: scale(1.1);
-}
-.about .about-content .right a div {
-  position: absolute;
-  display: block;
-}
-.about .about-content .right a div:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-putih));
-}
-.about .about-content .right a:hover div:nth-child(1) {
-  left: 100%;
-  transition: 0.75s;
-}
-.about .about-content .right a div:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, var(--color-putih));
-}
-.about .about-content .right a:hover div:nth-child(3) {
-  right: 100%;
-  transition: 0.5s;
-  transition-delay: 0.6s;
-}
-.about .about-content .right a div:nth-child(2) {
-  top: -100%;
-  right: 0;
-  height: 100%;
-  width: 2px;
-  background: linear-gradient(180deg, transparent, var(--color-putih));
-}
-.about .about-content .right a:hover div:nth-child(2) {
-  top: 100%;
-  transition: 1s;
-  transition-delay: 0.25s;
-}
-.about .about-content .right a div:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  height: 100%;
-  width: 2px;
-  background: linear-gradient(45deg, transparent, var(--color-putih));
-}
-.about .about-content .right a:hover div:nth-child(4) {
-  bottom: 100%;
-  transition: 0.5s;
-  transition-delay: 0.75s;
-}
-aside h2::before {
+/* menu btn styling */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
   display: none;
+}
+
+/* home section styling */
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 3rem 0 1rem;
+  align-items: center;
+}
+.home {
+  display: flex;
+  background: url("images//bg-atas.png") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+.home .home-content .text-1 {
+  font-size: 27px;
+  margin-bottom: 1rem;
+}
+.home .home-content .text-2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .text-3 {
+  font-size: 27px;
+  margin: 9px 0;
+}
+.home .home-content .text-3 span {
+  color: white;
+  font-weight: 500;
+  color: var(--color-kuning);
+}
+.home .home-content a {
+  background: rgb(229, 225, 230);
+  border: none;
+  border-radius: 2px;
+  clip-path: polygon(
+    12px 0px,
+    100% 0px,
+    100% 72%,
+    calc(100% - 12px) 100%,
+    0px 100%,
+    0px 12px
+  );
+  color: rgb(23, 15, 30);
+  font-family: "Ubuntu";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 18px;
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+  opacity: 0.9;
+}
+.home .home-content a:hover {
+  opacity: 100%;
+  filter: drop-shadow(rgb(255, 255, 255) -1px -1px 2px);
+  transform: scale(1.1, 1.1);
+}
+/* about styling */
+.about-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 3rem 0;
+  color: var(--color-putih);
+}
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 1rem 2rem;
+}
+.about-text {
+  color: var(--color-putih);
+  margin-left: -2rem;
+}
+.about-img {
+  transform: scale(0.7);
+}
+.social ul {
+  list-style: none;
+}
+#ig,
+#link,
+#git {
+  font-family: "Poppins";
+}
+.iconi {
+  transform: scale(1.5);
+  padding: 1rem 1rem 1rem 0.3rem;
 }
 /* skills section styling */
 .skills {
   margin: 160px auto;
   padding: 0 0;
+  background: var(--bg-dark);
 }
 .skills-title {
   position: relative;
@@ -300,6 +275,7 @@ aside h2::before {
   font-weight: bold;
   padding-top: 15px;
   color: var(--color-putih);
+  font-family: "League Spartan";
 }
 .projek-saya-after {
   text-align: center;
@@ -385,7 +361,6 @@ aside h2::before {
   transform: translateY(0);
 }
 .container .card .face.face2 .content p {
-  font-size: 26px;
   margin: 0;
   padding: 0;
   color: rgb(61, 61, 61);
@@ -445,6 +420,9 @@ aside h2::before {
   opacity: 0.3;
 }
 /* contact section styling */
+.contact-item {
+  padding: 2rem 5rem;
+}
 .head {
   color: var(--color-primary);
 }
@@ -453,7 +431,7 @@ aside h2::before {
   font-weight: bold;
 }
 .contact {
-  margin-top: 140px;
+  margin-top: 23px;
 }
 .contact .title::after {
   content: "In Your Touch";
@@ -475,6 +453,7 @@ aside h2::before {
   text-align: justify;
   font-family: "League Spartan";
   font-size: 20px;
+  color: var(--color-putih);
 }
 .contact .contact-content .left .icons {
   margin: 10px 0;
@@ -618,6 +597,14 @@ body {
 main {
   font-family: "League Spartan";
 }
+@media screen and (max-width: 3000px) {
+  .container .card .face.face2 {
+    transform: translateY(-70px);
+  }
+  .services {
+    justify-content: space-evenly;
+  }
+}
 /* media query */
 @media screen and (max-width: 1300px) {
   .container {
@@ -635,6 +622,9 @@ main {
     width: 300px;
     height: 200px;
     transition: 0.4s;
+  }
+  .container .card .face.face2 {
+    transform: translateY(-100px);
   }
   .container .card .face.face2 .content p {
     font-size: 12pt;
@@ -660,21 +650,13 @@ main {
     position: relative;
     justify-content: center;
   }
-  .header {
-    padding: 28px 7px 22px 7px;
-  }
+
   section .title {
     font-size: 28px;
   }
   .projek-saya,
   .skills-title {
     font-size: 28px;
-  }
-  .about .about-content .right .text {
-    font-size: 24px;
-  }
-  .about .about-content .right p {
-    font-size: 18px;
   }
 }
 @media screen and (max-width: 1042px) {
@@ -684,9 +666,6 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
-  .header {
-    padding: 32px 10px 27px 15px;
-  }
   .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -697,12 +676,6 @@ main {
   .projek-saya,
   .skills-title {
     font-size: 23px;
-  }
-  .about .about-content .right .text {
-    font-size: 20px;
-  }
-  .about .about-content .right p {
-    font-size: 15px;
   }
   .contact .contact-content .column {
     width: calc(90% - 30px);
@@ -734,6 +707,57 @@ main {
   }
   .certificate-img img {
     transform: scale(0.7);
+  }
+  .header {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+  .img-head {
+    transform: scale(0.8);
+  }
+  .img-head img {
+    margin-left: 25px;
+  }
+  .text-2 {
+    font-size: 42px !important;
+  }
+  .text-3 {
+    margin: 12px 0 !important;
+  }
+  .home-content {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .about-content {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+  .about-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    transform: scale(1.1);
+    margin-bottom: 1rem;
+  }
+  .about-text {
+    text-align: center;
+    margin-left: 0;
+  }
+  .about-text h2 {
+    padding: 1rem 0;
+  }
+  .about-text p {
+    text-align: justify;
+    margin: 0 2rem;
+  }
+  .social {
+    margin-top: 1rem;
+  }
+  .iconi {
+    transform: scale(1.5);
+    padding: 0.7rem 1rem;
   }
 }
 @media screen and (max-width: 480px) {
