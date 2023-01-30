@@ -10,7 +10,6 @@ html {
   scroll-behavior: smooth;
   background: var(--bg-dark);
 }
-
 /* custom scroll bar */
 ::-webkit-scrollbar {
   display: none;
