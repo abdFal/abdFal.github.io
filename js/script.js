@@ -1,3 +1,9 @@
+// Preloader
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+});
+// Sticky navbar
 $(document).ready(function () {
   $(window).scroll(function () {
     // sticky navbar on scroll script

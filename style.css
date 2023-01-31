@@ -10,6 +10,41 @@ html {
   scroll-behavior: smooth;
   background: var(--bg-dark);
 }
+/* preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-dark);
+  z-index: 9999;
+}
+
+.loader {
+  border-left: 14px solid var(--color-kuning);
+  border-top: 12px solid var(--color-kuning);
+  border-bottom: 13px solid var(--color-kuning);
+  border-right: 11px solid var(--color-kuning);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 5s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -60px 0 0 -60px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
   display: none;
