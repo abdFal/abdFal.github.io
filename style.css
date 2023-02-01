@@ -22,14 +22,14 @@ html {
 }
 
 .loader {
-  border-left: 14px solid var(--color-kuning);
-  border-top: 12px solid var(--color-kuning);
-  border-bottom: 13px solid var(--color-kuning);
-  border-right: 11px solid var(--color-kuning);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 5s linear infinite;
+  border-left: 10px solid var(--color-kuning);
+  border-top: 10px solid var(--color-kuning);
+  border-bottom: 10px solid var(--bg-dark);
+  border-right: 10px solid var(--color-kuning);
+  border-radius: 90%;
+  width: 86px;
+  height: 86px;
+  animation: spin 0.8s linear infinite;
   position: absolute;
   top: 50%;
   left: 50%;
