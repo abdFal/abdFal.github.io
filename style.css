@@ -131,9 +131,6 @@ section .title::after {
   font-size: 35px;
   font-weight: 600;
 }
-.my {
-  transform: rotate(20deg);
-}
 .navbar .logo span {
   background: var(--color-kuning);
   border-radius: 15px;
