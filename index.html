@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdillah Naufal Lesmana</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -27,6 +29,7 @@
 </div>
 <!-- content -->
   <body>
+    <main>
     <header>
       <nav class="navbar">
         <div class="navbar-item">
@@ -63,7 +66,7 @@
         </div>
       </section>
     </header>
-<!-- about section -->
+    <!-- about section -->
     <div id="about">
         <article>
             <section class="about">
@@ -89,7 +92,7 @@
             </section>
         </article>
         </div>
-<!-- skills section  -->
+    <!-- skills section  -->
     <div id="skills"></div>
         <article>
             <section class="skills">
@@ -99,7 +102,7 @@
                 <img class="skills-img2" src="/images/2.png" alt="">
             </section>
         </article>
-
+    
         <!--project section start -->
         <div id="project"></div>
         <article>
@@ -137,8 +140,6 @@
                         </div>
                         </div>
                     </div>
-                    
-                    
                     <div class="card" data-aos="fade-down" data-aos-delay="800"
                     data-aos-offset="0" data-aos-duration="600">
                     <div class="face face1">
@@ -193,8 +194,7 @@
                 <div class="contact-item">
                     <h2 class="title">Kontak Saya</h2>
                     <div class="contact-content">
-                        <div class="column left" data-aos="zoom-out-down" data-aos-delay="1000"
-                        data-aos-offset="0" data-aos-duration="600">
+                        <div class="column left" data-aos="zoom-out-down" data-aos-delay="1000">
                             <div class="text">In Your Touch</div>
                             <p>Kalo kalian pengen mengetahui saya lebih lanjut bisa menghubungi kontak ini. Makasih lho kalo kita bisa saling support.</p>
                             <div class="icons">
@@ -222,29 +222,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column right" data-aos="zoom-out-down" data-aos-delay="800"
-                        data-aos-offset="0" data-aos-duration="600">
-                            <div class="text">Kirim Pesan</div>
-                            <form action="#">
-                                <div class="fields">
-                                    <div class="field name">
-                                        <input type="text" placeholder="Nama" required="" oninvalid="this.setCustomValidity('Isi dulu kakak')" oninput="setCustomValidity('')">
-                                    </div>
-                                    <div class="field email">
-                                        <input type="email" placeholder="Email" required="" oninput="setCustomValidity('')">
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <input type="text" placeholder="Judul" required="" oninvalid="this.setCustomValidity('Isi dulu kakak')" oninput="setCustomValidity('')">
-                                </div>
-                                <div class="field textarea">
-                                    <textarea cols="30" rows="10" required="" placeholder="Mau ngomongin apa ni?" oninvalid="this.setCustomValidity('Isi dulu kaka')" oninput="setCustomValidity('')"></textarea>
-                                </div>
-                                <div class="button">
-                                    <button type="submit" onclick="kirim()">Kirim</button>
-                                </div>
-                            </form>
-                        </div>
+                        <div class="column right" data-aos="zoom-out-down" data-aos-delay="800">
+  <div class="text">Kirim Pesan</div>
+  <form id="myForm" action="#">
+    <div class="fields">
+      <div class="field name">
+        <input type="text" placeholder="Nama" name="from_name" required="" oninvalid="this.setCustomValidity('Isi dulu kakak')" oninput="setCustomValidity('')">
+      </div>
+      <div class="field email">
+        <input type="email" placeholder="Email" name="from_email" required="" oninput="setCustomValidity('')">
+      </div>
+    </div>
+    <div class="field">
+      <input type="text" placeholder="Judul" name="subject" required="" oninvalid="this.setCustomValidity('Isi dulu kakak')" oninput="setCustomValidity('')">
+    </div>
+    <div class="field textarea">
+      <textarea cols="30" rows="10" required="" placeholder="Mau ngomongin apa ni?" name="message" oninvalid="this.setCustomValidity('Isi dulu kaka')" oninput="setCustomValidity('')"></textarea>
+    </div>
+    <div class="button">
+      <button type="submit" onclick="kirim()">Kirim</button>
+    </div>
+  </form>
+</div>
+
                     </div>
                 </div>
             </section>
@@ -261,6 +261,13 @@
     </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script>
+  (function(){
+  emailjs.init("iSpIqR58C30ehPrAg");
+})();
+</script>
     <script>
     AOS.init();
 </script>
