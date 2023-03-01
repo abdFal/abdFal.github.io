@@ -167,7 +167,10 @@ section .title::after {
   cursor: pointer;
   display: none;
 }
-
+.toggle {
+  list-style: none;
+  display: none;
+}
 /* home section styling */
 .header {
   display: grid;
@@ -724,9 +727,17 @@ main {
     margin: 90px auto;
   }
 }
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 810px) {
   .navbar {
     display: none;
+  }
+  .header {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+  .toggle {
+    display: block;
+    width: 30px;
   }
 }
 @media screen and (max-width: 668px) {
@@ -738,10 +749,6 @@ main {
   }
   .certificate-img img {
     transform: scale(0.7);
-  }
-  .header {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0;
   }
   .img-head {
     transform: scale(0.8);
