@@ -295,7 +295,7 @@ section .title::after {
 .skills-img {
   display: block;
   margin: 100px auto;
-  width: 79%;
+  width: 67%;
   align-items: center;
 }
 .skills-img2 {
@@ -730,6 +730,9 @@ main {
 @media screen and (max-width: 810px) {
   .navbar {
     display: none;
+  }
+  .img-head {
+    transform: scale(0.8);
   }
   .header {
     grid-template-columns: repeat(1, 1fr);

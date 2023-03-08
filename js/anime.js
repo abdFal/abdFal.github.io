@@ -1,8 +1,13 @@
-const toggleButton = document.getElementsByClassName("toggle")[0];
-const navbarItems = document.getElementsByClassName("menu");
+// const toggle = document.querySelector(".toggle");
+// const menu = document.querySelector(".menu");
 
-toggleButton.addEventListener("click", () => {
-  for (let i = 0; i, navbarItems.length; i++) {
-    navbarItems[i].classList.toggle("active");
-  }
+// toggle.addEventListener("click", () => {
+//   menu.classList.toggle("active");
+// });
+
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+
+toggle.addEventListener("click", function () {
+  menu.classList.toggle("active");
 });
