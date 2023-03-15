@@ -25,14 +25,14 @@ html {
 }
 
 .loader {
-  border-left: 10px solid var(--color-kuning);
-  border-top: 10px solid var(--color-kuning);
-  border-bottom: 10px solid var(--bg-dark);
-  border-right: 10px solid var(--color-kuning);
+  border-left: 6px solid var(--color-kuning);
+  border-top: 6px solid var(--color-kuning);
+  border-bottom: 6px solid var(--bg-dark);
+  border-right: 6px solid var(--color-kuning);
   border-radius: 53%;
   width: 86px;
   height: 86px;
-  animation: spin 0.8s linear infinite;
+  animation: spin 0.4s linear infinite;
   position: absolute;
   top: 50%;
   left: 50%;
