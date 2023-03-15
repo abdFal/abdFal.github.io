@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -15,6 +17,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b2c7ef89be.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -41,51 +47,59 @@
         <nav class="navbar">
           <div class="navbar-item">
             <div class="logo">
-              <a href="#"><span class="my">My</span>Portofolio</a>
+              <a href="#"><span class="my">ANL.</span>Portofolio</a>
             </div>
             <ul class="menu">
               <li><a href="#home" class="menu-btn">Home</a></li>
               <li><a href="#about" class="menu-btn">About</a></li>
               <li><a href="#skills" class="menu-btn">Skills</a></li>
-              <li><a href="#services" class="menu-btn">Project</a></li>
+              <li><a href="#project" class="menu-btn">Project</a></li>
               <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
-
-            <img
-              class="toggle"
-              src="/images/burger-removebg-preview.png"
-              alt="toggle"
-              width="8%"
-              height="auto"
-            />
-
-            <div class="menu-btn">
-              <i class="fas fa-bars"></i>
-            </div>
           </div>
         </nav>
-
-        <!-- home section start -->
-        <section class="home" id="home">
-          <div class="header">
-            <div class="img-head" data-aos="fade-down" data-aos-delay="200">
-              <img src="/images/muka.png" width="100%" height="auto" alt="" />
-            </div>
-            <div class="max-width">
-              <div
-                class="home-content"
-                data-aos="fade-down"
-                data-aos-delay="300"
+      </header>
+      <!-- home section start -->
+      <section class="home" id="home">
+        <div class="header">
+          <div class="img-head">
+            <img
+              src="/images/muka.png"
+              width="100%"
+              height="auto"
+              alt=""
+              data-aos="fade-up"
+              data-aos-once="true"
+            />
+          </div>
+          <div class="head-desc" data-aos="fade-up" data-aos-once="true">
+            <div class="home-content">
+              <div class="text-1">Hello, my name is</div>
+              <div class="text-2"><h3>Abdillah Naufal Lesmana</h3></div>
+              <div class="text-3">I'm a <span class="typing"></span></div>
+              <a class="cv" href="/images/CV Update.jpg" download=""
+                >Download my CV</a
               >
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Abdillah Naufal Lesmana</div>
-                <div class="text-3">I'm a <span class="typing"></span></div>
-                <a href="/images/CV Update.jpg" download="">Download my CV</a>
+              <div class="mysocial">
+                <a href="https://linkedin.com/in/naufallsmn"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="https://github.com/abdFal"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="https://instagram.com/naufallsmn_"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UCpat0_xRdyyZaSYBpfzUILg"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
               </div>
             </div>
           </div>
-        </section>
-      </header>
+        </div>
+      </section>
+
       <!-- about section -->
       <div id="about">
         <article>
@@ -112,19 +126,9 @@
                   Saya senang memiliki banyak teman karena itu jangan lupa untuk
                   saling menyapa.
                 </p>
-                <div class="social">
-                  <ul>
-                    <li id="ig">
-                      <i class="iconi fa fa-instagram"></i>naufallsmn_
-                    </li>
-                    <li id="link">
-                      <i class="iconi fa fa-linkedin"></i
-                      >linkedin.com/in/naufallsmn
-                    </li>
-                    <li id="git">
-                      <i class="iconi fa fa-github"></i>github.com/abdFal
-                    </li>
-                  </ul>
+                <div class="sayhi">
+                  <!-- HTML !-->
+                  <button class="button-86" role="button">Say Hi</button>
                 </div>
               </div>
             </div>
@@ -136,141 +140,133 @@
       <article>
         <section class="skills">
           <h2 class="skills-title">My Skills</h2>
-          <img
-            class="skills-img"
-            src="/images/Frame 1.png"
-            alt=""
-            data-aos="zoom-out-up"
-            data-aos-delay="500"
-            data-aos-offset="0"
-            data-aos-duration="700"
-          />
-          <img class="skills-img2" src="/images/2.png" alt="" width="80%" />
+          <div class="container-skill">
+            <div class="skills">
+              <div class="skill">
+                <h3>HTML</h3>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <h3>CSS</h3>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <h3>Python</h3>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <h3>PHP</h3>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 50%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <h3>Laravel</h3>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 40%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="image">
+              <img class="img-skil" src="/images/aaa.png" alt="Your Image" />
+            </div>
+          </div>
         </section>
       </article>
 
       <!--project section start -->
       <div id="project"></div>
-      <article>
+      <div class="project-title">
         <h2 class="projek-saya">Project Saya</h2>
         <p class="projek-saya-after">yang saya buat</p>
-        <section class="services" id="services">
-          <div class="container">
-            <div
-              class="card"
-              data-aos="fade-down"
-              data-aos-delay="800"
-              data-aos-offset="0"
-              data-aos-duration="600"
-            >
-              <div class="face face1">
-                <div class="content">
-                  <i class="fa fa-angellist"></i>
-                  <h3>Audi Website</h3>
-                </div>
-              </div>
-              <div class="face face2">
-                <div class="content">
-                  <p>
-                    Ini adalah website perusahaan Audi yang saya buat dengan
-                    menggunakan HTML CSS Javascript dan framework Bootstrap 5
-                  </p>
-                  <a
-                    href="https://audi-pamijahan.abdillahnaufal1.repl.co/"
-                    target="_blank"
-                    type="button"
-                    >lihat</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="card"
-              data-aos="fade-down"
-              data-aos-delay="800"
-              data-aos-offset="0"
-              data-aos-duration="600"
-            >
-              <div class="face face1">
-                <div class="content">
-                  <i class="fa fa-codepen"></i>
-                  <h3>Temperature Conversion Web</h3>
-                </div>
-              </div>
-              <div class="face face2">
-                <div class="content">
-                  <p>
-                    Ini salah satu project kecil saya yaitu website konversi
-                    suhu celcius ke fahrenheit yang saya buat menggunakan Python
-                  </p>
-                  <a
-                    href="https://github.com/abdFal/Temperature-convertion"
-                    target="_blank"
-                    type="button"
-                    >Lihat</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="card"
-              data-aos="fade-down"
-              data-aos-delay="800"
-              data-aos-offset="0"
-              data-aos-duration="600"
-            >
-              <div class="face face1">
-                <div class="content">
-                  <i class="fa fa-android"></i>
-                  <h3>UI UX Design</h3>
-                </div>
-              </div>
-              <div class="face face2">
-                <div class="content">
-                  <p>
-                    Kalo ini adalah Design UI UX Android App Yang saya buat
-                    tentang UI UX Design Android
-                  </p>
-                  <a
-                    href="https://dribbble.com/abdFal"
-                    target="_blank"
-                    type="button"
-                    >Lihat</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="card"
-              data-aos="fade-down"
-              data-aos-delay="800"
-              data-aos-offset="0"
-              data-aos-duration="600"
-            >
-              <div class="face face1">
-                <div class="content">
-                  <i class="fa fa-bookmark"></i>
-                  <h3>Web Sekolah</h3>
-                </div>
-              </div>
-              <div class="face face2">
-                <div class="content">
-                  <p>
-                    Kalo ini adalah website sekolah saya yaitu IDN Boarding
-                    School Bogor
-                  </p>
-                  <a
-                    href="https://idn-boarding-school.abdillahnaufal1.repl.co/"
-                    target="_blank"
-                    type="button"
-                    >Lihat</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </article>
+      </div>
+      <div class="project-container">
+        <div class="project-image">
+          <img src="/images/a.png" width="95%" alt="" />
+        </div>
+        <div class="project-description">
+          <h1>Audi USA Website 2.0</h1>
+          <p>
+            Ini adalah website perusahaan Audi yang saya buat dengan menggunakan
+            HTML CSS Javascript dan framework Bootstrap 5, disana terdapat
+            penjelasan dari mobil ikonik dari Audi yaitu Audi R8, layanan dari
+            Audi, dan juga Electric cars dari Audi USA.
+          </p>
+          <!-- HTML !-->
+          <a
+            href="https://audi-pamijahan.abdillahnaufal1.repl.co/"
+            target="_blank"
+            ><button class="button-57" role="button">
+              <span class="text">See Details</span><span>Click me</span>
+            </button></a
+          >
+        </div>
+        <div class="project-image">
+          <img src="/images/bot.png" width="95%" alt="" />
+        </div>
+        <div class="project-description">
+          <h1>MF Chat Bot</h1>
+          <p>
+            MF-ChatBot is a simple chatbot created using OpenAI's GPT-3 API. The
+            chatbot is designed to engage in conversations with users and
+            provide responses based on the input it receives. this Bot is really
+            smart, you can ask whatever as you want
+          </p>
+          <!-- HTML !-->
+          <a href="https://github.com/abdFal/MF-ChatBot" target="_blank"
+            ><button class="button-57" role="button">
+              <span class="text">See Details</span><span>Click me</span>
+            </button></a
+          >
+        </div>
+        <div class="project-image">
+          <img src="/images/sch.png" width="95%" alt="" />
+        </div>
+        <div class="project-description">
+          <h1>School Website</h1>
+          <p>
+            Kalo ini adalah website sekolah saya yaitu IDN Boarding School
+            Bogor, ini sebenarnya adalah project pertama saya ketika belajar
+            dasar front end web Development dan dengan html css native.
+          </p>
+          <!-- HTML !-->
+          <a href="https://github.com/abdFal/School-Website" target="_blank"
+            ><button class="button-57" role="button">
+              <span class="text">See Details</span><span>Click me</span>
+            </button></a
+          >
+        </div>
+        <div class="project-image">
+          <img src="/images/todo.png" width="95%" alt="" />
+        </div>
+        <div class="project-description">
+          <h1>Todo List App</h1>
+          <p>
+            Ini adalah website perusahaan Audi yang saya buat dengan menggunakan
+            HTML CSS Javascript dan framework Bootstrap 5, disana terdapat
+            penjelasan dari mobil ikonik dari Audi yaitu Audi R8, layanan dari
+            Audi, dan juga Electric cars dari Audi USA.
+          </p>
+          <!-- HTML !-->
+          <a href="https://github.com/abdFal/Todo-List-App" target="_blank"
+            ><button class="button-57" role="button">
+              <span class="text">See Details</span><span>Click me</span>
+            </button></a
+          >
+        </div>
+      </div>
 
       <!-- certification -->
       <div id="certificates"></div>
@@ -290,6 +286,7 @@
               src="/images/sertifikat_course_315_2804440_200123113012_page-0001.jpg"
               alt=""
             />
+            <img src="/images/sertifikat_course_page-0001.jpg" alt="" />
           </div>
         </section>
       </article>
@@ -300,11 +297,7 @@
           <div class="contact-item">
             <h2 class="title">Kontak Saya</h2>
             <div class="contact-content">
-              <div
-                class="column left"
-                data-aos="zoom-out-down"
-                data-aos-delay="1000"
-              >
+              <div class="column left">
                 <div class="text">In Your Touch</div>
                 <p>
                   Kalo kalian pengen mengetahui saya lebih lanjut bisa
@@ -344,20 +337,16 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="column right"
-                data-aos="zoom-out-down"
-                data-aos-delay="800"
-              >
+              <div class="column right">
                 <div class="text">Kirim Pesan</div>
-                <form id="myForm" action="#">
+                <form id="myForm" action="#" required>
                   <div class="fields">
                     <div class="field name">
                       <input
                         type="text"
                         placeholder="Nama"
                         name="from_name"
-                        required=""
+                        required
                         oninvalid="this.setCustomValidity('Isi dulu kakak')"
                         oninput="setCustomValidity('')"
                       />
@@ -367,7 +356,7 @@
                         type="email"
                         placeholder="Email"
                         name="from_email"
-                        required=""
+                        required
                         oninput="setCustomValidity('')"
                       />
                     </div>
@@ -377,7 +366,7 @@
                       type="text"
                       placeholder="Judul"
                       name="subject"
-                      required=""
+                      required
                       oninvalid="this.setCustomValidity('Isi dulu kakak')"
                       oninput="setCustomValidity('')"
                     />
@@ -386,7 +375,7 @@
                     <textarea
                       cols="30"
                       rows="10"
-                      required=""
+                      required
                       placeholder="Mau ngomongin apa ni?"
                       name="message"
                       oninvalid="this.setCustomValidity('Isi dulu kaka')"
@@ -394,7 +383,14 @@
                     ></textarea>
                   </div>
                   <div class="button">
-                    <button type="submit" onclick="kirim()">Kirim</button>
+                    <button
+                      type="submit"
+                      onclick="kirim()"
+                      class="button-89"
+                      role="button"
+                    >
+                      Kirim
+                    </button>
                   </div>
                 </form>
               </div>
@@ -403,6 +399,7 @@
         </section>
       </article>
     </main>
+    <!-- HTML !-->
     <!-- footer section start -->
     <footer>
       <span
@@ -438,4 +435,12 @@
       AOS.init();
     </script>
   </body>
+  <script src="https://unpkg.com/kursor"></script>
+  <script>
+    new kursor({
+      type: 4,
+      removeDefaultCursor: true,
+      color: "#fff",
+    });
+  </script>
 </html>
