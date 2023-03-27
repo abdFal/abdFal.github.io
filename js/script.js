@@ -1,8 +1,14 @@
 // Preloader
 window.addEventListener("load", function () {
-  const preloader = document.getElementById("preloader");
+  var preloader = document.querySelector(".preloader");
+  preloader.classList.add("hide-preloader");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var preloader = document.querySelector(".preloader");
   preloader.style.display = "none";
 });
+
 // Sticky navbar
 $(document).ready(function () {
   $(window).scroll(function () {
