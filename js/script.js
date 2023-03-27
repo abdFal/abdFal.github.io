@@ -1,11 +1,6 @@
 // Preloader
 window.addEventListener("load", function () {
   var preloader = document.querySelector(".preloader");
-  preloader.classList.add("hide-preloader");
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  var preloader = document.querySelector(".preloader");
   preloader.style.display = "none";
 });
 

@@ -29,15 +29,15 @@ html {
 
 .preloader-text {
   font-family: "Quicksand";
-  font-size: 33px;
+  font-size: 36px;
   font-weight: 400;
   color: #fff;
-  animation: blink 1s infinite;
+  animation: blink 2s infinite;
 }
 
 @keyframes blink {
   50% {
-    opacity: 0.01;
+    opacity: 0;
   }
 }
 
