@@ -33,6 +33,7 @@ html {
   font-weight: 700;
   color: #fff;
   animation: blink 2.5s infinite;
+  border-bottom: 1px solid white;
 }
 
 @keyframes blink {
