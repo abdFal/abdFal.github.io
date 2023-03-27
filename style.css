@@ -30,14 +30,14 @@ html {
 .preloader-text {
   font-family: "Quicksand";
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 700;
   color: #fff;
-  animation: blink 2s infinite;
+  animation: blink 2.5s infinite;
 }
 
 @keyframes blink {
   50% {
-    opacity: 0;
+    opacity: 0.02;
   }
 }
 
@@ -126,6 +126,11 @@ section .title::after {
 }
 .navbar.sticky .logo a span {
   color: #fff;
+}
+.span-load {
+  font-family: "Inter";
+  font-weight: 200;
+  letter-spacing: 2.5px;
 }
 .navbar .menu li {
   list-style: none;
