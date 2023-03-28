@@ -28,7 +28,7 @@ html {
 }
 
 .preloader-text {
-  font-family: "Quicksand";
+  font-family: "Inter";
   font-size: 36px;
   font-weight: 700;
   color: #fff;
@@ -50,7 +50,7 @@ html {
   --bg-dark: #100f0f;
   --color-putih: rgb(235, 243, 255);
   --color-kuning: #1909ab;
-  --color-secondary: #080707;
+  --color-secondary: #090d25;
   --color-aan: #2c394b;
   --color-away: #334756;
 }

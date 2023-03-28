@@ -21,11 +21,4 @@ $(document).ready(function () {
     backSpeed: 60,
     loop: true,
   });
-
-  var typed = new Typed(".typing-2", {
-    strings: ["Programmer", "Manager", "Developer"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
 });
