@@ -103,7 +103,7 @@ section .title::after {
 }
 .navbar.sticky {
   padding: 15px 0;
-  background: #020010;
+  background: #06002b;
   color: #fff;
 }
 .navbar-item {
@@ -162,7 +162,6 @@ section .title::after {
   min-height: 500px;
   background-size: cover;
   background-attachment: fixed;
-  font-family: "baskerville", sans-serif;
 }
 .header {
   display: grid;
