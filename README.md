@@ -11,6 +11,7 @@ JavaScript
 Jekyll
 GitHub Pages
 Emailjs
+Luxyjs
 
 ## Contributing
 If you find a bug or would like to suggest an improvement, feel free to create an issue or submit a pull request.
