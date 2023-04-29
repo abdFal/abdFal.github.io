@@ -49,8 +49,8 @@ html {
 :root {
   --bg-dark: #100f0f;
   --color-putih: rgb(235, 243, 255);
-  --color-kuning: #1909ab;
-  --color-secondary: #040612;
+  --color-kuning: #1b09e2;
+  --color-secondary: #040615;
   --color-aan: #2c394b;
   --color-away: #334756;
 }
@@ -103,7 +103,7 @@ section .title::after {
 }
 .navbar.sticky {
   padding: 15px 0;
-  background: #06002b;
+  background: #0a0a13;
   color: #fff;
 }
 .navbar-item {
@@ -175,6 +175,7 @@ section .title::after {
 .home .home-content .text-1 {
   font-size: 27px;
   margin-bottom: 1rem;
+  font-family: "Quicksand";
 }
 .home .home-content .text-2 {
   font-size: 48px;
@@ -197,12 +198,12 @@ section .title::after {
   letter-spacing: 13px;
 }
 .home .home-content .text-3 {
-  font-size: 27px;
+  font-size: 30px;
   margin: 9px 0;
 }
 .home .home-content .text-3 span {
   color: white;
-  font-weight: 500;
+  font-weight: bold;
   color: var(--color-kuning);
 }
 .cv {
@@ -236,10 +237,13 @@ section .title::after {
 }
 .mysocial i {
   color: white;
-
   font-size: 1.6rem;
   padding: 2px;
   margin: 9px 8px 5px 8px;
+  transition: all 0.4s ease;
+}
+.mysocial i:hover {
+  color: var(--color-kuning);
 }
 /* about styling */
 .about-title {
@@ -252,6 +256,18 @@ section .title::after {
   color: var(--color-putih);
   border-bottom: 2px solid transparent; /* set initial border to be transparent */
   transition: border-bottom-color 0.3s ease-in-out; /* add transition effect */
+}
+.about-title::after {
+  content: "Who am i?";
+  background: transparent;
+  color: var(--color-kuning);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  font-size: 20px;
+  transform: translateX(-50%);
+  font-weight: normal;
+  font-family: "Quicksand";
 }
 .about-title:hover {
   border-bottom-color: var(--color-putih); /* change border color on hover */
@@ -267,8 +283,7 @@ section .title::after {
 
 .about-text {
   color: var(--color-putih); /* assuming this is a custom variable */
-  width: 85%;
-  margin-left: -2rem;
+  padding: 0 1rem;
 }
 
 .about-text h2 {
@@ -379,7 +394,7 @@ section .title::after {
   cursor: default;
   font-family: "Inter";
   font-size: 2rem;
-  margin: 3rem 0;
+  margin: 4.3rem 0;
   color: var(--color-putih);
   border-bottom: 2px solid transparent; /* set initial border to be transparent */
   transition: border-bottom-color 0.3s ease-in-out; /* add transition effect */
@@ -392,17 +407,19 @@ section .title::after {
   background: transparent;
   color: var(--color-kuning);
   position: absolute;
-  bottom: -35px;
+  bottom: -60px;
   left: 50%;
   font-size: 20px;
   transform: translateX(-50%);
   font-weight: normal;
-  font-family: "Inter";
+  font-family: "Quicksand";
 }
 .container-skill {
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-content: center;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 7px 0;
@@ -445,8 +462,8 @@ section .title::after {
 }
 .img-skil:hover {
   transform: scale(1.05);
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+  -webkit-filter: sepia(0.7);
+  filter: sepia(0.7);
   border: 1px solid var(--color-putih);
 }
 /* project section styling */
@@ -477,7 +494,6 @@ section .title::after {
   transform: scale(1.05);
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
-  border: 1.3px solid var(--color-putih);
 }
 
 .project-description {
@@ -582,7 +598,7 @@ section .title::after {
   text-align: center;
   font-weight: bold;
   cursor: default;
-  font-family: "Inter";
+  font-family: "Quicksand";
   font-size: 2rem;
   margin: 0.3rem 0;
   color: var(--color-putih);
@@ -609,7 +625,7 @@ section .title::after {
   text-align: center;
   font-weight: bold;
   cursor: default;
-  font-family: "Inter";
+  font-family: "Quicksand";
   font-size: 2rem;
   margin: 3rem 0;
   color: var(--color-putih);
@@ -627,11 +643,11 @@ section .title::after {
   color: var(--color-kuning);
   position: absolute;
   left: 50%;
-  bottom: -27px;
+  bottom: -60px;
   font-size: 20px;
   transform: translateX(-50%);
   font-weight: normal;
-  font-family: "Inter";
+  font-family: "Quicksand";
 }
 .certificate-img {
   margin: 9rem 0;
@@ -782,7 +798,7 @@ section .title::after {
   font-size: 20px;
   transform: translateX(-50%);
   font-weight: normal;
-  font-family: "Inter";
+  font-family: "Quicksand";
 }
 .contact .contact-content .column {
   width: calc(50% - 30px);
@@ -1074,6 +1090,10 @@ main {
   }
 }
 @media screen and (max-width: 668px) {
+  .img-head {
+    width: 80%;
+    margin: 0 auto;
+  }
   .home {
     padding: 0;
   }
@@ -1126,12 +1146,27 @@ main {
   }
 }
 @media screen and (max-width: 480px) {
+  .project-image {
+    height: auto;
+  }
+  .head-desc {
+    margin: 2rem 0;
+  }
+  .button-86 {
+    margin: 15px auto;
+  }
   .container-skill {
     flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .img-skil {
+    transform: scale(1.1);
   }
   .skill {
-    padding: 4px 1rem 4px 1rem;
     width: 100%;
+  }
+  .skills {
+    width: 90%;
   }
   .header {
     display: default;
@@ -1143,6 +1178,12 @@ main {
   }
   .logo i {
     font-size: 19px;
+  }
+  .testimonial-text {
+    margin: 1rem 0;
+  }
+  .testimonial-text h3 {
+    margin-top: 2.5rem;
   }
   .contact .contact-content .column {
     width: calc(100% - 1px);

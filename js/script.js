@@ -14,11 +14,4 @@ $(document).ready(function () {
       $(".navbar").removeClass("sticky");
     }
   });
-  // typing text animation script
-  var typed = new Typed(".typing", {
-    strings: ["Programmer", "Manager", "Developer"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
 });
