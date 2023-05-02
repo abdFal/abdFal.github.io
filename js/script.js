@@ -1,6 +1,6 @@
 // Preloader
 window.addEventListener("load", function () {
-  var preloader = document.querySelector(".preloader");
+  var preloader = document.querySelector(".center-body");
   preloader.style.display = "none";
 });
 
