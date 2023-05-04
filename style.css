@@ -127,7 +127,7 @@ body {
   --bg-dark: #100f0f;
   --color-putih: rgb(235, 243, 255);
   --color-kuning: #1b09e2;
-  --color-secondary: #040615;
+  --color-secondary: #030416;
   --color-aan: #2c394b;
   --color-away: #334756;
 }
@@ -180,7 +180,7 @@ section .title::after {
 }
 .navbar.sticky {
   padding: 15px 0;
-  background: #0a0a13;
+  background: #0d0d18;
   color: #fff;
 }
 .navbar-item {
@@ -188,6 +188,9 @@ section .title::after {
   align-items: center;
   justify-content: space-between;
   padding: 0 80px 0 40px;
+}
+.about-open {
+  align-items: center;
 }
 .navbar .logo a {
   font-family: "Inter";
@@ -363,6 +366,9 @@ section .title::after {
   padding: 0 1rem;
 }
 
+.about-text p {
+  font-family: "Quicksand";
+}
 .about-text h2 {
   font-size: 2rem;
 }
