@@ -21,3 +21,16 @@ function kirim() {
     }
   );
 }
+
+// carousel
+document.addEventListener("DOMContentLoaded", function () {
+  var splide = new Splide(".splide", {
+    type: "loop",
+    perPage: 3,
+    perMove: 1,
+    padding: "1.6rem",
+    focus: "center",
+  });
+
+  splide.mount();
+});

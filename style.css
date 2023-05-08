@@ -329,7 +329,7 @@ section .title::after {
 .about-title {
   position: relative;
   cursor: default;
-  font-family: "Inter";
+  font-family: "Quicksand";
   text-align: center;
   font-size: 2.2rem;
   margin: 3rem 0;
@@ -463,6 +463,105 @@ section .title::after {
 .button-86:active::after {
   transition: 0s;
   transform: translate(0, 5%);
+}
+
+/* interest section styling  */
+.carousell {
+  margin-top: 25vh;
+  margin-bottom: 35vh;
+}
+.splide__arrow--prev,
+.splide__arrow--next {
+  background: white;
+  transition: all 0.25s ease;
+}
+.splide__arrow--next:hover,
+.splide__arrow--prev:hover {
+  background: var(--color-kuning);
+}
+.splide__slide {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.splide__slide.is-active {
+  opacity: 1;
+  width: 110%;
+  height: 110%;
+}
+.splide__slide:not(.is-active) {
+  opacity: 0.5;
+  transform: scale(0.97);
+  transition: all 0.3s, all 0.3s;
+}
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#image-carousel {
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
+}
+.carousel-title {
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  cursor: default;
+  font-family: "Quicksand";
+  font-size: 2rem;
+  margin: 4.3rem 0;
+  color: var(--color-putih);
+  border-bottom: 2px solid transparent; /* set initial border to be transparent */
+  transition: border-bottom-color 0.3s ease-in-out; /* add transition effect */
+}
+.carousel-title:hover {
+  border-bottom-color: var(--color-putih);
+}
+.carousel-title::after {
+  content: "Apa aja yang pernah saya lewati?";
+  background: transparent;
+  color: var(--color-kuning);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  font-size: 20px;
+  transform: translateX(-50%);
+  font-weight: normal;
+  font-family: "Quicksand";
+}
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.carousel-nav button {
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  height: 3rem;
+  margin: 0 1rem;
+  width: 3rem;
+  transition: all 0.5s;
+}
+
+.carousel-nav button:hover {
+  background: #999;
+}
+
+.carousel-nav button:focus {
+  outline: none;
+}
+.slide-desc {
+  color: white;
+  font-family: "Quicksand";
+  font-weight: 200;
+  text-align: center;
+  width: 80%;
+  font-size: 13px;
+  margin: 0 auto;
 }
 /* skills section styling */
 .skills {
