@@ -22,6 +22,19 @@ function kirim() {
   );
 }
 
+// typing animation
+var typed = new Typed(".typing", {
+  strings: [
+    "Software Engineer",
+    "Graphic designer",
+    "Business Man",
+    "IT Student",
+  ],
+  typeSpeed: 50,
+  backSpeed: 50,
+  loop: true,
+});
+
 // carousel
 document.addEventListener("DOMContentLoaded", function () {
   var splide = new Splide(".splide", {
