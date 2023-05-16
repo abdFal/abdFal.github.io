@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
     perMove: 1,
     padding: "1.6rem",
     focus: "center",
+    breakpoints: {
+      480: { perPage: 1, padding: "1.2rem" },
+    },
   });
 
   splide.mount();

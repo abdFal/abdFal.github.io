@@ -191,6 +191,7 @@ section .title::after {
 }
 .about-open {
   align-items: center;
+  justify-content: center;
 }
 .navbar .logo a {
   font-family: "Inter";
@@ -343,7 +344,7 @@ section .title::after {
   background: transparent;
   color: var(--color-kuning);
   position: absolute;
-  bottom: -40px;
+  bottom: -37px;
   left: 50%;
   font-size: 20px;
   transform: translateX(-50%);
@@ -1338,9 +1339,9 @@ main {
     text-align: justify;
     margin: 0 2rem;
   }
-  #image-carousel {
+  .splide__slide {
     width: 30%;
-    height: 30%;
+    height: auto;
   }
   .social {
     margin-top: 1rem;
@@ -1351,6 +1352,9 @@ main {
   }
 }
 @media screen and (max-width: 480px) {
+  .con-con h1 {
+    font-size: 1.4rem;
+  }
   .project-image {
     height: auto;
   }
@@ -1359,6 +1363,13 @@ main {
   }
   .button-86 {
     margin: 15px auto;
+  }
+  .splide__slide {
+    width: 10%;
+    height: auto;
+  }
+  .carousel-title::after {
+    bottom: -55px;
   }
   .container-skill {
     flex-direction: column;
