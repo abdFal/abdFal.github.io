@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&family=Inter:wght@200;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@200;400;600;700&family=Quicksand:wght@200;400;700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/general-sans");
-@import url("https://fonts.googleapis.com/css?family=Lato : 300, 400, 700");
 
 * {
   margin: 0;
@@ -126,7 +125,8 @@ body {
 :root {
   --bg-dark: #100f0f;
   --color-putih: rgb(235, 243, 255);
-  --color-kuning: #1b09e2;
+  --color-kuning: #3d00d9;
+  --color-kunang: #21005f;
   --color-secondary: #030416;
   --color-aan: #2c394b;
   --color-away: #334756;
@@ -233,6 +233,30 @@ section .title::after {
   opacity: 0.8;
 }
 .navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+
+/* scrollup */
+.scroll-up-button {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 24px;
+  background-color: #ffffff;
+  color: var(--color-kunang);
+  border-radius: 50%;
+  z-index: 9999;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.scroll-up-button:hover {
+  background-color: var(--color-secondary);
   color: #fff;
 }
 
@@ -344,7 +368,7 @@ section .title::after {
   background: transparent;
   color: var(--color-kuning);
   position: absolute;
-  bottom: -37px;
+  bottom: -27px;
   left: 50%;
   font-size: 20px;
   transform: translateX(-50%);
@@ -543,7 +567,7 @@ section .title::after {
   background: transparent;
   color: var(--color-kuning);
   position: absolute;
-  bottom: -30px;
+  bottom: -27px;
   left: 50%;
   font-size: 20px;
   transform: translateX(-50%);
@@ -594,7 +618,7 @@ section .title::after {
   text-align: center;
   font-weight: bold;
   cursor: default;
-  font-family: "Inter";
+  font-family: "Quicksand";
   font-size: 2rem;
   margin: 4.3rem 0;
   color: var(--color-putih);
@@ -609,7 +633,7 @@ section .title::after {
   background: transparent;
   color: var(--color-kuning);
   position: absolute;
-  bottom: -60px;
+  bottom: -27px;
   left: 50%;
   font-size: 20px;
   transform: translateX(-50%);
@@ -845,7 +869,7 @@ section .title::after {
   color: var(--color-kuning);
   position: absolute;
   left: 50%;
-  bottom: -60px;
+  bottom: -27px;
   font-size: 20px;
   transform: translateX(-50%);
   font-weight: normal;
@@ -960,7 +984,6 @@ section .title::after {
   .card img {
     margin: -100px 0 30px 0;
     width: 100%;
-    max-width: 1000px;
   }
 }
 
@@ -976,7 +999,7 @@ section .title::after {
   text-align: center;
   font-weight: bold;
   cursor: default;
-  font-family: "Inter";
+  font-family: "Quicksand";
   font-size: 2rem;
   margin: 3rem 0;
   color: var(--color-putih);
@@ -988,9 +1011,9 @@ section .title::after {
   border-bottom-color: var(--color-putih);
 }
 .contact {
-  margin-top: 23px;
+  margin: 6rem auto;
 }
-.contact .title::after {
+.contact-title::after {
   content: "In Your Touch";
   background: transparent;
   color: var(--color-kuning);
@@ -1027,7 +1050,7 @@ section .title::after {
 }
 .contact .contact-content .row i {
   font-size: 25px;
-  color: var(--color-kuning);
+  color: var(--color-kunang);
 }
 .contact .contact-content .info .head {
   font-weight: 500;
@@ -1106,7 +1129,7 @@ section .title::after {
   transform: scale(1.1);
 }
 .button-89 {
-  --b: 3px; /* border thickness */
+  --b: 1px; /* border thickness */
   --s: 0.45em; /* size of the corner */
   --color: #fff;
 
@@ -1122,7 +1145,7 @@ section .title::after {
     calc(100% - var(--b) - 2 * var(--_p));
   transition: 0.3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
-  outline-offset: 0.6em;
+  outline-offset: 0.3em;
   font-size: 16px;
   margin: 6px 0;
 
@@ -1146,6 +1169,7 @@ section .title::after {
 }
 /* footer styling */
 footer {
+  margin-top: 4.3rem;
   opacity: 0.8;
   text-align: center;
   cursor: default;
@@ -1173,6 +1197,43 @@ body {
 main {
   font-family: "Inter";
 }
+
+.anime {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+}
+
+.canvas-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  image-rendering: pixelated;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "General Sans";
+  font-weight: lighter;
+  letter-spacing: 7px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* dendam sama responsive */
 @media screen and (max-width: 3000px) {
   .container .card .face.face2 {
     transform: translateY(-70px);
@@ -1404,10 +1465,24 @@ main {
   .contact .contact-content .column {
     width: calc(100% - 1px);
   }
+  .text-overlay {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 448px) {
   section .title::after {
     bottom: -25px;
+  }
+
+  .certificate .title::after,
+  .contact-title::after,
+  .carousel-title::after,
+  .skills-title::after {
+    bottom: -58px;
+  }
+  .about-title::after {
+    bottom: -36px;
   }
 }
 @media screen and (max-width: 414px) {

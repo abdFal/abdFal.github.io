@@ -15,3 +15,31 @@ $(document).ready(function () {
     }
   });
 });
+
+// scrollup-btn
+window.addEventListener("scroll", function () {
+  var scrollHeight = document.documentElement.scrollHeight;
+  var clientHeight = document.documentElement.clientHeight;
+  var scrollPosition =
+    window.pageYOffset ||
+    document.documentElement.scrollTop ||
+    document.body.scrollTop ||
+    0;
+
+  if (scrollPosition >= clientHeight) {
+    document.querySelector(".scroll-up-button").style.display = "block";
+  } else {
+    document.querySelector(".scroll-up-button").style.display = "none";
+  }
+});
+
+// Fungsi untuk me-redirect ke halaman atas ketika tombol scroll up di klik
+document
+  .querySelector(".scroll-up-button")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });

@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css?family=League Spartan"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/b2c7ef89be.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- icon -->
     <link rel="icon" href="images/Logo.png" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -61,6 +65,10 @@
       </nav>
     </header>
     <main id="luxy" data-speed-y="1">
+      <!-- Tombol scroll up -->
+      <a href="#" class="scroll-up-button"
+        ><i class="fa-solid fa-up"></i>&uarr;</a
+      >
       <!-- home section start -->
       <section class="home" id="home">
         <div class="header">
@@ -347,6 +355,22 @@
             </button></a
           >
         </div>
+        <div class="project-image">
+          <img src="/images/quiz.png" width="95%" alt="" />
+        </div>
+        <div class="project-description">
+          <h1>Quiz App</h1>
+          <p>
+            This is an Application of quiz app that i made with pure JavaScript,
+            you can only answer honestly, or ur'e dumb, want to search on google
+            with copas? you can't do it, just try and show me Your IQ!
+          </p>
+          <a href="https://abdFal.github.io/Quiz" target="_blank"
+            ><button class="button-57" role="button">
+              <span class="text">See Details</span><span>Click me</span>
+            </button></a
+          >
+        </div>
 
         <div class="project-image">
           <img src="/images/opti.png" width="95%" alt="" />
@@ -406,6 +430,11 @@
           </div>
         </section>
       </article>
+      <div class="con">
+        <div class="con-con">
+          <h1 class="scroll-down">ELON SAYS</h1>
+        </div>
+      </div>
       <div id="testimonial"></div>
       <div class="testimonial">
         <div class="card">
@@ -421,8 +450,8 @@
       <div id="contact"></div>
       <article>
         <section class="contact">
+          <h2 class="contact-title">Contact Me</h2>
           <div class="contact-item">
-            <h2 class="title">Kontak Saya</h2>
             <div class="contact-content">
               <div class="column left">
                 <div class="text">In Your Touch</div>
@@ -525,11 +554,13 @@
           </div>
         </section>
       </article>
-      <div class="con">
-        <div class="con-con">
-          <h1 class="scroll-down">IT'S MORE THAN PORTFOLIO</h1>
+      <div class="anime">
+        <div class="canvas-container">
+          <canvas id="myCanvas"></canvas>
+          <h2 class="text-overlay">IT'S MORE THAN PORTFOLIO</h2>
         </div>
       </div>
+
       <!-- footer section start -->
       <footer>
         <span
@@ -554,6 +585,7 @@
         </div>
       </footer>
     </main>
+    <script src="js/anime.js"></script>
     <script src="js/script.js"></script>
     <script src="js/form.js"></script>
     <script src="js/splide.min.js"></script>
