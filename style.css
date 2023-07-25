@@ -491,6 +491,11 @@ section .title::after {
   transform: translate(0, 5%);
 }
 
+/* routines */
+.routines img {
+  margin: 18 auto;
+}
+
 /* scroll down text */
 .con {
   margin: 6rem auto 15rem auto;
@@ -888,9 +893,24 @@ section .title::after {
   opacity: 0.9;
   transition: 0.3s ease;
 }
-.certificate-img img:hover {
+.google-certificates img {
+  transform: scale(0.9);
+  width: 60%;
+  height: auto;
+  opacity: 0.9;
+  transition: 0.3s ease;
+  margin: 0 auto;
+}
+.certificate-img img:hover,
+.google-certificates img:hover {
   opacity: 0.8;
   transform: scale(1.1);
+}
+.google-certificates {
+  margin: 6rem auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }
 /* testimonial */
 .testimonial {
