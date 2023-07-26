@@ -130,6 +130,7 @@ body {
   --color-secondary: #030416;
   --color-aan: #2c394b;
   --color-away: #334756;
+  --popover-height: 35px;
 }
 /* all similar content styling codes */
 section {
@@ -235,6 +236,102 @@ section .title::after {
 .navbar.sticky .menu li a:hover {
   color: #fff;
 }
+/* popover */
+.popoverr {
+  position: fixed;
+  top: 50%;
+  right: -10px;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  padding: 20px;
+  z-index: 10000;
+  font-family: "Quicksand";
+}
+
+.popover {
+  position: relative;
+  height: var(--popover-height);
+  width: 60px;
+  text-align: center;
+}
+
+.popover > img {
+  width: var(--popover-height);
+  height: var(--popover-height);
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+.popover-menu {
+  position: absolute;
+  top: 0;
+  right: 64px;
+  width: 260px;
+  padding: 16px;
+  translate: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 6px 50px rgb(0 0 0 / 16%);
+  transition: 0.3s;
+  z-index: 102;
+}
+
+.popover-menu::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  rotate: 45deg;
+  background: inherit;
+}
+
+.popover:hover .popover-menu {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
+}
+
+.popover:hover > img {
+  opacity: 0.65;
+}
+
+.popover-menu header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.popover-menu h2 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.popover-menu h3 {
+  margin: 0;
+  font-size: 11px;
+  opacity: 0.5;
+}
+
+.popover-menu header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .popoverr {
+    right: -25px;
+  }
+}
+/* end popover */
 
 /* scrollup */
 .scroll-up-button {
@@ -548,8 +645,8 @@ section .title::after {
   filter: grayscale(0.7);
 }
 #image-carousel {
-  width: 68%;
-  height: 68%;
+  width: 73%;
+  height: 73%;
   margin: 0 auto;
 }
 .carousel-title {
@@ -680,6 +777,24 @@ section .title::after {
   height: 100%;
   border-radius: 2px;
   text-align: center;
+}
+.html {
+  background-color: rgb(255, 89, 0);
+}
+.css {
+  background-color: skyblue;
+}
+.py {
+  background-color: rgb(0, 64, 255);
+}
+.laravel {
+  background-color: red;
+}
+.kt {
+  background-color: cornflowerblue;
+}
+.js {
+  background-color: yellow;
 }
 
 .image {
@@ -1213,6 +1328,9 @@ header,
 main,
 body {
   background-color: var(--color-secondary);
+}
+.popover-header {
+  background-color: white;
 }
 main {
   font-family: "Inter";

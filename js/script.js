@@ -19,7 +19,7 @@ $(document).ready(function () {
 // scrollup-btn
 window.addEventListener("scroll", function () {
   var scrollHeight = document.documentElement.scrollHeight;
-  var clientHeight = document.documentElement.clientHeight;
+  var clientHeight = 2000;
   var scrollPosition =
     window.pageYOffset ||
     document.documentElement.scrollTop ||
